@@ -8,41 +8,108 @@
     margin-top: 30px;
   }
 
-  .text-container{
+   
+      /* * Estilos para el contenedor de texto */
+
+  .text-container {
+  color: white;
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  max-width: 600px;
+  padding: 1rem 0;
+}
+
+.title-dashboardd {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-dashboardd{
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+
+
+@media (max-width: 768px) {
+  .text-container {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .title-dashboard {
+    font-size: 1.5rem;
+    
+  }
+
+  .text-dashboard {
+    font-size: 0.95rem;
+    text-align: justify;
+  }
+}
+
+  
+
+  /* .text-container{
     max-width: 100%;
     margin:0 150px;
     margin-top: 30px;
-  }
+  } */
 
-  .title-dashboard, .text-dashboard{
+  /* .title-dashboard{
     margin: 20px 400px;
     color: #f0f0f0;
-  }
+  } */
   
-  .cards-wrapper {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .cards-row {
-    display: flex;
-    width: max-content;
-    animation: scroll-left 15s linear infinite;
-  }
-  
-  .card {
-    min-width: 200px;
-    height: 150px;
-    background-color: white;
-    margin: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    flex-shrink: 0;
-  }
+  .container {
+  background-color: #f0f0f0; /* fondo gris */
+  border-radius: 20px;
+  padding: 20px;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 40px ;
+  width: 90%;
+}
+
+.cards-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #e6e6e6;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.cards-row {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 15s linear infinite;
+}
+
+.card {
+  min-width: 200px;
+  height: 150px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  padding: 1rem;
+  text-align: center;
+}
   
   /* Animación para scroll infinito */
   @keyframes scroll-left {
@@ -69,7 +136,7 @@
   
 
   .section-container {
-    background-color: #f9f9f9; /* mismo tono del fondo del dashboard */
+    background-color: #252424; 
     padding: 40px 20px;
     border-radius: 20px;
     margin: 40px auto;
@@ -77,8 +144,8 @@
   }
   
   .section-title {
-    font-size: 24px;
-    color: #333;
+    font-size: 1.5rem;
+    color: #f2f2f2;
     margin-bottom: 20px;
     font-weight: 600;
     text-align: center;
@@ -87,7 +154,7 @@
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
     margin-bottom: 40px;
   }
@@ -103,7 +170,7 @@
     text-align: center;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    height: 90px;  /* Ajustamos altura delicadamente */
+    height: 70px;  /* Ajustamos altura delicadamente */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,6 +204,25 @@
   .form-field {
     width: 100%;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  mat-form-field {
+    width: 100%; /* Asegurar que los campos de Material también ocupen todo el ancho */
+  }
+  mat-form-field .mat-form-field-flex {
+    border-radius: 10%; /* Bordes redondeados al 10% */
+      border: 1px solid #913CC2 !important; /* Borde de 1px de color específico */
+  }
+
+  mat-form-field .mat-form-field-outline {
+      border-radius: 10% !important; /* Bordes redondeados al 10% */
+      border: 1px solid #913CC2 !important; /* Borde de 1px de color específico */
+  }
+
+  mat-form-field .mat-form-field-underline {
+      display: none; /* Ocultar la línea inferior */
   }
   
   .form-buttons {
@@ -153,6 +239,16 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .text-dashboard {
+    font-size: 14px;
+    color: #dfdfdf;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   
   @media (max-width: 600px) {
     .contact-form {
