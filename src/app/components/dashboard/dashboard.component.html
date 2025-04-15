@@ -1,1 +1,89 @@
-<p>dashboard works!</p>
+<div class="text-container">
+  <h4 class="title-dashboard">
+    Hello Stalker!  
+  </h4>
+    <p class="text-dashboard">
+      I’m Julian, a proactive person also i really like team work. 
+      I from Argentina and i’m 29 year old.
+    I started to introduce in the programming world about a three years 
+    ago and i’m currently in my final year as an Information Systems Analyst.
+    </p>
+</div>
+
+<div class="container">
+    <div class="cards-wrapper">
+      <p class="title">Proyectos</p>
+      <div class="cards-row">
+        <div class="card">Proyecto 1</div>
+        <div class="card">Proyecto 2</div>
+        <div class="card">Proyecto 3</div>
+        <div class="card">Proyecto 4</div>
+  
+        
+        <div class="card">Proyecto 1</div>
+        <div class="card">Proyecto 2</div>
+        <div class="card">Proyecto 3</div>
+        <div class="card">Proyecto 4</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-container">
+    <h2 class="section-title">Habilidades</h2>
+    <div class="skills-grid">
+      <div class="skill-box">TypeScript</div>
+      <div class="skill-box">Angular</div>
+      <div class="skill-box">Node</div>
+      <div class="skill-box">JavaScript</div>
+      <div class="skill-box">SQL</div>
+      <div class="skill-box">Git</div>
+      <div class="skill-box">Postman</div>
+      <div class="skill-box">HTML/CSS</div> 
+    </div>
+  
+    <h2 class="section-title">Idiomas</h2>
+    <div class="skills-grid">
+      <div class="skill-box">Español</div>
+      <div class="skill-box">Inglés</div>
+    </div>
+  </div>
+
+  <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+    <div class="form-field">
+      <mat-form-field appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" name="name" [(ngModel)]="formData.name" required>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-field">
+      <mat-form-field appearance="fill">
+        <mat-label>Organización</mat-label>
+        <input matInput type="text" name="organization" [(ngModel)]="formData.organization" required>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-field">
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" name="email" [(ngModel)]="formData.email" required>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-field">
+      <mat-form-field appearance="fill">
+        <mat-label>Mensaje</mat-label>
+        <textarea matInput name="message" [(ngModel)]="formData.message" required></textarea>
+      </mat-form-field>
+    </div>
+  
+    <div class="form-buttons">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.valid">
+        Enviar mensaje
+      </button>
+      <button mat-raised-button color="accent" (click)="downloadCV()" type="button">
+        Descargar CV
+      </button>
+    </div>
+  </form>
+  

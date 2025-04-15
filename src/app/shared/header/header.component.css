@@ -29,3 +29,34 @@
     top: 50%; /* Centra verticalmente el círculo */
     transform: translateY(-50%); 
   }
+
+  @media (max-width:750px) {
+    .circle{
+        width: 150px;
+        height: 150px;
+    }
+  }
+
+  .sidenav-container {
+    height: 100%;
+  }
+  
+  .header-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  /* Mostrar el botón hamburguesa en pantallas chicas */
+  @media (max-width: 768px) {
+    .menu-button {
+      display: inline-flex;
+    }
+  }
+  
+
+  
