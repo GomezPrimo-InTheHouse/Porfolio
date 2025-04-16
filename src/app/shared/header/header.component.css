@@ -91,7 +91,12 @@
   position: absolute;
   width: 230px;
   height: 230px;
-  background-color: #1976d2;
+  
+  background-image: url('./../../../assets/profile2.jpeg');
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   right: 300px;
   top: 50%;

@@ -7,9 +7,55 @@
     margin:0 150px;
     margin-top: 30px;
   }
-
+  .social-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-right: 150px;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .social-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: #742aa5 !important;
+    font-size: 1.5rem;
+    background-color: #0e0e0e; /* Violeta */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-button mat-icon {
+    color: white;
+  }
+  
+  .social-button:hover {
+    
+    color:#e6e6e6 !important;
+    background-color: #742aa5 !important; 
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .social-buttons-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 0;
+      justify-content: center;
+      margin-left: 0;
+    }
+  }
+  
    
-      /* * Estilos para el contenedor de texto */
+  /* * Estilos para el contenedor de texto */
 
   .text-container {
   color: white;
