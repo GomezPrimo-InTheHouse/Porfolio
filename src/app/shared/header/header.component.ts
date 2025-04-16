@@ -76,7 +76,12 @@ export class HeaderComponent implements AfterViewInit {
     link.click();
   }
 
-
+  scrollTo(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
   
   
 }

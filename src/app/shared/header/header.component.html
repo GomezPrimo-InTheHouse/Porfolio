@@ -6,11 +6,10 @@
     
       <!-- Usamos botones con routerLink correctamente -->
        <div class="buttons">
-
-         <button mat-button class="btn" routerLink="/">Inicio</button>
-         <button mat-button class="btn" >Proyectos</button>
-         <button mat-button class="btn" >Contacto</button>
-       </div>
+        <button mat-button class="btn" routerLink="/">Inicio</button>
+        <button mat-button class="btn" (click)="scrollTo('proyectos')">Proyectos</button>
+        <button mat-button class="btn" (click)="scrollTo('contacto')">Contacto</button>
+      </div>
       <div class="circle"> </div>
       <div class="text-header">
         <h1><span class="typed-text"></span><span class="cursor">|</span></h1>
