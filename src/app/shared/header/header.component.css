@@ -1,62 +1,183 @@
 .main-container {
-    background-image: url('./../../../assets/header-img.png') !important;
-
-  }
-
-.header-container{
-    display:block;
-    width:100%;
-    height:50vh;
-    margin: 0 150px; /* Margen de 150px a la izquierda y derecha */
-    
-    position: relative;
+  background-image: url('./../../../assets/header-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
-.btn{
 
-    color: white !important;
-}
-.image{
-    width:100%;
+.header-container {
 
+  /* margin: 0 150px; */
+  width: 100%;
+  min-height: 50vh;
+  /* padding: 20px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: start;
+  gap: 1rem;
 }
+.cv-button-wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.cv-button {
+  background-color: #913CC2;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  max-width: 200px;
+  height: 35px;
+  text-align: center;
+}
+
+.cv-button:hover {
+  background-color: #7d2aa8;
+  transform: scale(1.05);
+}
+
+/* Estilo para los botones */
+.btn {
+  background: transparent; /* Aseguramos que no tenga fondo */
+  color: white!important; /* Hereda el color de texto del contenedor */
+  font-weight: 500;
+  border: none; /* Asegura que no tenga bordes */
+  transition: transform 0.3s ease, letter-spacing 0.3s ease, font-size 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para los botones */
+.buttons:hover .btn {
+  transform: scale(1.1); /* Aumenta el tamaño de los botones */
+  letter-spacing: 2px; /* Espacia las letras por 10px */
+  font-size: 1rem; /* Aumenta el tamaño de la fuente */
+  margin:0 5px;
+}
+
+/* Estilo para el contenedor de los botones */
+.buttons {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease; /* Suaviza la animación cuando se activa el hover en el contenedor */
+}
+
+/* El hover en el contenedor buttons afecta a todos los botones dentro */
+.buttons:hover {
+  transform: scale(1.05); /* Le da un pequeño aumento al contenedor */
+}
+
+
 .circle {
-    position: absolute;
-    width: 230px; /* Ancho del círculo */
-    height: 230px; /* Alto del círculo */
-    background-color: #1976d2; /* Color de fondo del círculo */
-    border-radius: 50%; /* Hace que el div sea un círculo */
-    right: 300px; /* Margen a la derecha */
-    top: 50%; /* Centra verticalmente el círculo */
-    transform: translateY(-50%); 
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background-color: #1976d2;
+  border-radius: 50%;
+  right: 300px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.text-header {
+  z-index: 2;
+  position: absolute;
+  /* mover el texto hacia la izquierda */
+  left: 150px;
+}
+
+.text-header h1, .text-header p {
+  margin: 0.5rem 0;
+  color: white;
+}
+
+.text-header span {
+  color: #BB86FC;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 0rem 0rem;
+    text-align: center;
+  }
+  .cv-button-wrapper{
+    position: relative;
+    bottom: 10px;
   }
 
-  @media (max-width:750px) {
-    .circle{
-        width: 150px;
-        height: 150px;
-    }
-  }
-
-  .sidenav-container {
-    height: 100%;
-  }
-  
-  .header-toolbar {
+  .btn {
+    width: 100%;
+    max-width: 250px;
     display: flex;
-    justify-content: space-between;
-    padding: 0 1rem;
+    flex-direction: row;
   }
-  
-  .menu-button {
-    display: none;
+  .buttons{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
-  
-  /* Mostrar el botón hamburguesa en pantallas chicas */
-  @media (max-width: 768px) {
-    .menu-button {
-      display: inline-flex;
-    }
-  }
-  
 
-  
+  .circle {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin: 20px auto;
+  }
+  .text-header{
+    position: relative;
+    left: 0;
+  }
+  .text-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .text-header p {
+    font-size: 1.1rem;
+  }
+}
+
+
+.typed-text {
+  color: white !important;
+  font-weight: bold;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: white;
+  width: 2px;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { background-color: transparent; }
+}
+
+/* Para resaltar "Julian" y "portfolio" */
+.purple {
+  color: #9824db;
+}
