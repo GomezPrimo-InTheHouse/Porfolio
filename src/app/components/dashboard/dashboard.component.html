@@ -26,7 +26,7 @@ mientras disfruto colaborar en proyectos que realmente sumen. Si llegaste hasta 
 </div>
 
 
-<div class="section-container">
+<div class="section-container section-proyect">
     <div class="cards-wrapper">
       <p class="title">Proyectos</p>
       <div class="cards-row">
@@ -42,10 +42,19 @@ mientras disfruto colaborar en proyectos que realmente sumen. Si llegaste hasta 
         <div class="card">Proyecto 4</div>
       </div>
     </div>
+    <div class="cv-button-wrapper">
+       
+
+      <button class="cv-button" 
+      (click)="downloadCV()"
+      
+      >Descargar CV!</button>
+    
+  </div>
   </div>
 
   <div class="section-container-skills">
-    <h2 class="section-title">Habilidades</h2>
+    <h2 class="section-title title">Habilidades</h2>
     <div class="skills-grid">
       <div class="skill-box">TypeScript</div>
       <div class="skill-box">Angular</div>
@@ -57,7 +66,7 @@ mientras disfruto colaborar en proyectos que realmente sumen. Si llegaste hasta 
       <div class="skill-box">HTML/CSS</div> 
     </div>
   
-    <h2 class="section-title">Idiomas</h2>
+    <h2 class="section-title title">Idiomas</h2>
     <div class="skills-grid">
       <div class="skill-box">Español</div>
       <div class="skill-box">Inglés</div>
@@ -104,7 +113,7 @@ mientras disfruto colaborar en proyectos que realmente sumen. Si llegaste hasta 
         Enviar mensaje
       </button>
       <button mat-raised-button color="accent" (click)="downloadCV()" type="button" class="cv-button">
-        Descargar mi CV!
+        Descargar CV!
       </button>
     </div>
   </form>

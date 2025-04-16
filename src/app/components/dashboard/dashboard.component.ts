@@ -41,9 +41,9 @@ export class DashboardComponent {
     }
   }
 
-  // Método para descargar el CV
+  
   downloadCV() {
-    const cvUrl = 'path_to_your_cv.pdf';  // Reemplaza con la URL de tu CV
+    const cvUrl = './../../../assets/cv-julian.pdf'; 
     const link = document.createElement('a');
     link.href = cvUrl;
     link.download = 'Curriculum_Vitae.pdf';

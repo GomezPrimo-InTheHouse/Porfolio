@@ -67,5 +67,16 @@ export class HeaderComponent implements AfterViewInit {
       type();
     }
   }
+
+  downloadCV() {
+    const cvUrl = './../../../assets/cv-julian.pdf'; 
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Curriculum_Vitae.pdf';
+    link.click();
+  }
+
+
+  
   
 }
