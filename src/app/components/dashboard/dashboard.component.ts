@@ -49,5 +49,10 @@ export class DashboardComponent {
     link.download = 'Curriculum_Vitae.pdf';
     link.click();
   }
+  
+  goToGithub() {
+    window.open('https://github.com/GomezisInTheHouse?tab=repositories', '_blank');
+  }
+  
 
 }

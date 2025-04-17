@@ -23,6 +23,7 @@
     border-radius: 50%;
     border: none;
     color: #742aa5 !important;
+    text-decoration: none !important;
     font-size: 1.5rem;
     background-color: #0e0e0e; /* Violeta */
     display: flex;

@@ -1,5 +1,7 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+
+const urlCv = './../../../assets/cv-julian.pdf'; // Cambia la ruta según la ubicación de tu archivo PDF
 // importar inject
 
 @Component({
@@ -69,11 +71,12 @@ export class HeaderComponent implements AfterViewInit {
   }
 
   downloadCV() {
-    const cvUrl = './../../../assets/cv-julian.pdf'; 
     const link = document.createElement('a');
-    link.href = cvUrl;
-    link.download = 'Curriculum_Vitae.pdf';
+    link.href = 'assets/julian-cv.jpg'; // Ajustá si está en subcarpeta
+    link.download = 'Julian_CV.jpg';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   }
 
   scrollTo(sectionId: string): void {
